@@ -1,5 +1,4 @@
 #include "../headers/header.h"
-#include <stdio.h>
 
 #define LENGTH_PARSE 16
 int menu() {
@@ -15,11 +14,12 @@ int menu() {
   if (atoi(parse)) {
     option = atoi(parse);
   } else {
+    printf(" Thanks!\n");
     return 1;
   }
   switch (option) {
     case 1:
-      //login();
+      login();
       break;
     case 2:
       //singup();
