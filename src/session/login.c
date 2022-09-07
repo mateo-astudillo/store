@@ -1,10 +1,11 @@
 #include "../../headers/header.h"
 
 int login(){
-  user u;
+  USER u;
   char *sql = malloc(LENGTH_SQL);
   char *pass = malloc(LENGTH_PASS);
-
+  int l = 0;
+  
   printf(" Insert username: \n > ");
   scanf("%s", u.username);
   printf(" Insert password: \n > ");
@@ -12,10 +13,13 @@ int login(){
 
   sprintf(sql, "SELECT password FROM users WHERE username='%s';", u.username);
 
-  read(callback, sql, pass);
+  read_DB(get_pass, sql, pass);
 
   if (!strcmp(pass, u.password)) {
     printf(" Logged\n");
+    while (l == 0) {
+      l = menu_logged(&u);
+    }
   } else {
     printf(" Not Logged\n");
   }
@@ -25,7 +29,7 @@ int login(){
   return 0;
 }
 
-int callback(void *ptr, int argc, char *argv[], char *colm[]){
+int get_pass(void *ptr, int argc, char *argv[], char *colm[]){
   strcpy(ptr, argv[0]);
   return 0;
 }

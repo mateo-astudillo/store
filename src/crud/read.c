@@ -1,6 +1,6 @@
 #include "../../headers/header.h"
 
-int read(int callback(void *, int, char**, char**), char *sql, void *ptr){
+int read_DB(int callback(void *, int, char**, char**), char *sql, void *ptr){
   sqlite3 *DB = NULL;
   int sts = 0;
 
