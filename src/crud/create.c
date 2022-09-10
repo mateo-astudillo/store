@@ -1,6 +1,6 @@
 #include "../../headers/header.h"
 
-int create(){
+int create_DB(){
   sqlite3 *DB = NULL;
   int sts = 0; // status
   char *sql = (char*)calloc(LENGTH_SQL, sizeof(char));
