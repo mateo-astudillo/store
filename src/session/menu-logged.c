@@ -3,7 +3,7 @@
 int menu_logged(USER *u){
   int option = 0;
   char parse[LENGTH_PARSE];
-  Clear
+  Clear;
   printf(" 0) Log out\n");
   printf(" 1) Shop\n");
   printf(" 2) Sell\n");
@@ -28,6 +28,7 @@ int menu_logged(USER *u){
       see_balance(u->username);
       break;
     case 5:
+      modify_user(u);
       break;
     default:
       printf(" Option Incorrect\n");

@@ -8,10 +8,10 @@
 
 #ifdef _WIN32
 #include <system>
-#define Clear system("cls");
+#define Clear system("cls")
 #else
 #include <unistd.h>
-#define Clear system("clear");
+#define Clear system("clear")
 #endif
 
 #define CREATE_TABLE_DB "CREATE TABLE \"users\" (\"id\" INTEGER NOT NULL, \"username\" TEXT NOT NULL, \"password\" TEXT NOT NULL, \"balance\" REAL DEFAULT 0, \"name\" TEXT DEFAULT 'name', \"surname\" TEXT DEFAULT 'surname', \"age\" INTEGER DEFAULT 0, PRIMARY KEY(\"id\" AUTOINCREMENT));"
@@ -34,11 +34,17 @@ typedef struct {
 
 // Menu
 int menu();
-int menu_logged();
+int show_all(void *, int, char**, char**);
+int menu_logged(USER *);
+
 
 // Crud
-int create_DB();
+int create_user(char *);
 int read_DB();
+int update_user(char *, char *, char *);
+
+// Init
+int create_DB();
 
 // Session
 int login();
@@ -47,5 +53,6 @@ int get_pass(void *, int , char **, char **);
 // User
 int see_balance(char *);
 int get_balance(void *, int , char **, char **);
+int modify_user(USER *);
 
 #endif

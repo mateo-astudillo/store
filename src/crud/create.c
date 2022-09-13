@@ -1,6 +1,6 @@
 #include "../../headers/header.h"
 
-int create_record(char *sql){
+int create_user(char *sql){
   sqlite3 *DB = NULL;
   int sts = 0;
 

@@ -4,7 +4,7 @@ int login(){
   USER u;
   char *sql = malloc(LENGTH_SQL);
   char *pass = malloc(LENGTH_PASS);
-  int l = 0;
+  int l = 0; // Logged
   
   printf(" Insert username: \n > ");
   scanf("%s", u.username);
