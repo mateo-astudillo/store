@@ -1,10 +1,10 @@
-#include "../headers/header.h"
+#include "../../headers/header.h"
 
 int menu_logged(USER *u){
   int option = 0;
   char parse[LENGTH_PARSE];
   Clear
-  printf(" 0) Exit\n");
+  printf(" 0) Log out\n");
   printf(" 1) Shop\n");
   printf(" 2) Sell\n");
   printf(" 3) See my products\n");

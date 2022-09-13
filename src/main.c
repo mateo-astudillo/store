@@ -1,10 +1,9 @@
 #include "../headers/header.h"
 
 int main(){
-  //create_DB();
-  int m = 0;
-  while (m == 0) {
-    m = menu();
+  int app = 0;
+  while (app == 0) {
+    app = menu();
   }
   return 0;
 }
