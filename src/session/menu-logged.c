@@ -1,10 +1,12 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/macros.h"
+#include "../../hdr/user.h"
+#include "../../hdr/session.h"
 
-int menu_logged(USER *u){
+int menu_logged(USER *u) {
   int finish = 1; // True
   int option = 0;
   char parse[LENGTH_PARSE];
-
   while (finish) {
     Clear;
     printf(" 0) Log out\n");
@@ -40,3 +42,4 @@ int menu_logged(USER *u){
   }
   return 0;
 }
+

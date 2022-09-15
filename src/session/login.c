@@ -1,4 +1,6 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/session.h"
+#include "../../hdr/crud.h"
 
 int login(){
   USER u;
@@ -27,7 +29,7 @@ int login(){
   return 0;
 }
 
-int get_pass(void *ptr, int argc, char *argv[], char *colm[]){
+int get_pass(void *ptr, int argc, char **argv, char **colm){
   strcpy(ptr, argv[0]);
   return 0;
 }

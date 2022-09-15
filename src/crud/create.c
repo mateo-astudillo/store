@@ -1,5 +1,8 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/macros.h"
+#include "../../hdr/crud.h"
 
+/*
 int create_user(char *sql){
   sqlite3 *DB = NULL;
   int sts = 0;
@@ -19,3 +22,4 @@ int create_user(char *sql){
   sqlite3_close(DB);
   return 0;
 }
+*/

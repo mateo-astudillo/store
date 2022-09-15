@@ -1,7 +1,6 @@
-#ifndef _USER_H_
-#define _USER_H_
+#pragma once
 
-#include "./header.h"
+#include "./macros.h"
 
 typedef struct {
   unsigned int id;
@@ -13,4 +12,7 @@ typedef struct {
   unsigned int age;
 } USER;
 
-#endif // !_USER_H_
+int see_balance(char *);
+int get_balance(void *, int, char **, char **);
+
+int modify_user(USER *);

@@ -1,4 +1,7 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/macros.h"
+#include "../../hdr/user.h"
+#include "../../hdr/crud.h"
 
 int see_balance(char *user){
   char *sql = malloc(LENGTH_SQL);

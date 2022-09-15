@@ -8,12 +8,12 @@ CFLAGS = -lsqlite3
 
 all: app
 
-app: headers/header.h $(OBJS)
+app: $(OBJS)
 	gcc -o ex $(OBJS) $(CFLAGS)
 
-src/%.o: src/%.c 
+src/%.o: src/%.c hdr/menu.h
 	gcc -c -o $@ $<
-src/crud/%.o: src/crud/%.c
+src/crud/%.o: src/crud/%.c hdr/crud.h
 	gcc -c -o $@ $<
 src/session/%.o: src/session/%.c
 	gcc -c -o $@ $<
@@ -23,4 +23,4 @@ src/init/%.o: src/init/%.c
 	gcc -c -o $@ $<
 
 clean: 
-	rm ex $(CFILES) $(CSESSION) $(CCRUD) $(CUSER) $(CINIT) 
+	rm ex $(OBJS) 

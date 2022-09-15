@@ -1,4 +1,6 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/macros.h"
+#include "../../hdr/crud.h"
 
 int read_DB(int callback(void *, int, char**, char**), char *sql, void *ptr){
   sqlite3 *DB = NULL;

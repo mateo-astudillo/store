@@ -1,4 +1,6 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/macros.h"
+#include "../../hdr/crud.h"
 
 int update_user(char *column, char *value, char *user){
   sqlite3 *DB = NULL;

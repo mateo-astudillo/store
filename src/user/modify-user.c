@@ -1,4 +1,7 @@
-#include "../../headers/header.h"
+#include "../../hdr/deps.h"
+#include "../../hdr/macros.h"
+#include "../../hdr/user.h"
+#include "../../hdr/crud.h"
 
 int modify_user(USER *u){
   int option = 0;
@@ -13,12 +16,10 @@ int modify_user(USER *u){
   printf(" 5) Age\n");
   printf(" > ");
   scanf("%s", parse);
-  if (atoi(parse)) {
-    option = atoi(parse);
-  } else {
-    return 1;
-  }
+  option = atoi(parse);
   switch (option) {
+    case 0:
+      break;
     case 1:
       scanf("%s", value);
       update_user("username", value, u->username);
@@ -46,5 +47,6 @@ int modify_user(USER *u){
       printf(" Option Incorrect\n");
       break;
   }
+  sleep(1);
   return 0;
 }
