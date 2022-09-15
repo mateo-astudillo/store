@@ -8,7 +8,7 @@
 
 #ifdef _WIN32
 #include <system>
-#define Clear system("cls")
+#define Clear; system("cls");
 #else
 #include <unistd.h>
 #define Clear system("clear")

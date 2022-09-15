@@ -17,9 +17,7 @@ int login(){
 
   if (!strcmp(pass, u.password)) {
     printf(" Logged\n");
-    while (l == 0) {
-      l = menu_logged(&u);
-    }
+    menu_logged(&u);
   } else {
     printf(" Not Logged\n");
   }
